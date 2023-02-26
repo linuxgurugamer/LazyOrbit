@@ -1,18 +1,20 @@
-using UnityEngine;
+﻿using BepInEx;
 using KSP.Game;
+using UnityEngine;
+
 using System.Collections.Generic;
 using System.Linq;
-using SpaceWarp.API.Mods;
+using KSP.Sim.impl;
 using System.IO;
 using System.Reflection;
-using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
-using KSP.Sim.impl;
+
+
 
 namespace LazyOrbit
 {
-    [MainMod]
-    public class LazyOrbit : Mod
+    [BepInPlugin("io.bepis.lazyorbit", "LazyOrbit", "1.0")]
+    public class LazyOrbit : BaseUnityPlugin
     {
         static bool loaded = false;
         private bool drawUI = false;
@@ -80,9 +82,10 @@ namespace LazyOrbit
         void Awake()
         {
             windowRect = new Rect((Screen.width * 0.7f) - (windowWidth / 2), (Screen.height / 2) - (windowHeight / 2), 0, 0);
+            OnInitialized();
         }
 
-        public override void OnInitialized()
+        public void OnInitialized()
         {
             if (loaded)
             {
@@ -432,7 +435,7 @@ namespace LazyOrbit
             }
             catch (FileNotFoundException)
             {
-                Logger.Info("Creating a new LazyOrbit settings file.");
+                Logger.LogInfo("Creating a new LazyOrbit settings file.");
                 settings = new LazyOrbitSettings();
             }
 
