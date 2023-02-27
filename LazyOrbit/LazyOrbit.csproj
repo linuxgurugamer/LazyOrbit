@@ -53,6 +53,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>R:\KSP2_0.1.0\KSP2_x64_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>R:\KSP2_0.1.0\KSP2_x64_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -67,6 +70,12 @@
     <Reference Include="UnityEngine.InputLegacyModule">
       <HintPath>R:\KSP2_0.1.0\KSP2_x64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>R:\KSP2_0.1.0\KSP2_x64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>R:\KSP2_0.1.0\KSP2_x64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
